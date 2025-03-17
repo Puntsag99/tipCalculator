@@ -8,9 +8,16 @@
   width: 100vw;
   height: 100vw;
   display: flex;
+  row-gap: 80px;
   align-items: center;
   justify-content: center;
-  background-color: green;
+  flex-direction: column;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.title {
+  color: white;
+  font-size: 80px;
 }
 
 .tip-calculator {
@@ -22,14 +29,13 @@
 }
 
 .section {
-  gap: 4px;
   width: 368px;
   display: flex;
-  height: 303.5px;
+  height: 100%;
+  row-gap: 10px;
   padding: 26px 16px;
   border-radius: 10px;
   flex-direction: column;
-
   background-color: #03958a;
 }
 
@@ -57,13 +63,28 @@ p {
 }
 
 .tips {
-  display: flex;
+  gap: 12px;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(2, 35px);
 }
 
 .tips button {
   width: 70px;
   height: 35px;
+  border: none;
   font-size: 16px;
+  cursor: pointer;
   color: #01464b;
   border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+#reset-button {
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }

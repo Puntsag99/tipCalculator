@@ -9,6 +9,9 @@
   </head>
   <body>
     <div class="tip-container">
+      <header>
+        <h2 class="title">Tip Calculator</h2>
+      </header>
       <div class="tip-calculator">
         <div class="section">
           <div class="bill-container">
@@ -23,20 +26,22 @@
           <div class="select-tip">
             <p>Select Tip %</p>
           </div>
-          <di class="tips">
-
-            
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+          <div class="tips" id="tips">
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>35%</button>
+            <button>50%</button>
+            <button>65%</button>
+            <button>80%</button>
           </div>
+
+          <p id="total">0.00</p>
+          <button id="reset-button">Reset</button>
         </div>
       </div>
     </div>
+    <script src="./tip.js"></script>
   </body>
 </html>
