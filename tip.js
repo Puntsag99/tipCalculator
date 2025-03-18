@@ -1,5 +1,7 @@
 const billInput = document.getElementById("bill-input");
 const tips = document.getElementById("tips");
+const total = document.getElementById("total");
+const reset = document.getElementById("reset-button");
 
 const sanitizeBillInput = (input) => {
   input = input.replace(/[^\d.]/g, "");
@@ -16,7 +18,19 @@ billInput.addEventListener("input", (event) => {
 
 tips.addEventListener("click", (event) => {
   if (event.target.tagName !== "BUTTON") return;
-  const percentage = event.target.textContent.replace("%", "");
-  console.log(parseFloat("4.5"));
-  console.log(typeof percentage);
+
+  const amount = parseFloat(billInput.value);
+
+  if (!amount) return alert("Bilee oruul");
+
+  const percentage = parseFloat(event.target.textContent.replace("%", ""));
+
+  const tipAmount = amount + (amount * percentage) / 100;
+
+  total.textContent = `Total:${tipAmount}`;
+});
+
+reset.addEventListener("click", () => {
+  billInput.value = "";
+  total.textContent = "0.00";
 });
